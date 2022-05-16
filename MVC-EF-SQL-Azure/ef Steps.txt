@@ -1,0 +1,68 @@
+ASP.net core - Web Application, Mobile APP, RestAPI, and many more
+		web content development platform
+
+MVC - Model View Controller
+	 passing the data between Model -> Controller -> View
+				  Mode  <- Controller <- View
+Forms - Razor syntax
+Viewbag
+---------------------------------------------
+We worked with Static Data, this is good when you have small data
+
+
+Database 
+
+ASP.Net core 
+EF Core - Entity Framework Core to work with database
+
+-----------------------------------------------
+Todays APP - ASP.Net Core MVC APP with EF Core having SQL Server Database on Azure Cloud
+					(u have sql server install on your lab machine as well)
+
+---------------------------------------------------
+Step 1: Created table on SQL Server instance(Make sure you add a Primary key)
+	added some records to the table
+step 2: creatae a new ASP.Net MVC Core app
+	test the app, make sure you see a home page
+step 3: Add EF Core packages from Nuget Package manager (solution expoprer)
+	4 packages
+	Microsoft.EntityFrameworkCore.Design
+	Microsoft.EntityFrameworkCore.Tools
+	Microsoft.EntityFrameworkCore
+	Microsoft.EntityFrameworkCore.SqlServer
+	
+	build the application
+
+step 4: ready your connection string, (put user id, password etc)
+
+Server=tcp:shopping-server.database.windows.net,1433;Initial Catalog=shoppingDB;Persist Security Info=False;User ID=trainer;Password=Password@1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+Step 5: from the tools menu, Nuget package manager -> Nuget package manager console ->
+	Scaffold-DbContect connection string
+
+	EG.
+	 Scaffold-DbContext "Server=tcp:shopping-server.database.windows.net,1433;Initial 	 Catalog=shoppingDB;Persist Security Info=False;User ID =trainer;Password=Password@1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" -OutputDir Models\EF -Provider Microsoft.EntityFrameworkCore.SqlServer
+
+Step 6: Add a new Controller from solution explorer, right click on Controller --> Add Controller, 
+								MVC Controller with View and EF
+
+		Choose the model file (table name) and contect file
+
+	say ok, it will cteate a new controller and u will see view created as well for you
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

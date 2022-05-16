@@ -1,0 +1,15 @@
+create table Products
+(
+	pId int primary key,
+	pName varchar(20),
+	pCategory varchar(20),
+	pPrice int,
+	pIsInStock bit
+)
+
+insert into Products values(1,'Pepsi','Cold-Drink',50,1)
+insert into Products values(2,'Coke','Cold-Drink',50,1)
+insert into Products values(3,'Maggie','Fast-Food',50,1)
+insert into Products values(4,'Pasta','Fast-Food',50,1)
+insert into Products values(5,'Fossil','Electronics',50,1)
+insert into Products values(6,'Dell','Electronics',50,1)
